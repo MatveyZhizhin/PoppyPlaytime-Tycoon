@@ -1032,9 +1032,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33afdf348e2e8a2478b4d0b0d2538a6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 8161373292101209106, guid: 54f30e8ebf6d2aa4d85a20c184ca1156, type: 3}
   _maxSize: 5
   _childSpawnPoint: {fileID: 1987821548}
+  _prefab: {fileID: 8161373292101209106, guid: 54f30e8ebf6d2aa4d85a20c184ca1156, type: 3}
 --- !u!1001 &1474204991
 PrefabInstance:
   m_ObjectHideFlags: 0
