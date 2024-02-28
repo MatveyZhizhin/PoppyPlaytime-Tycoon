@@ -11,14 +11,8 @@ namespace Assets.Scripts.Player
 
         [SerializeField] private Transform _childSpawnPoint;
         private List<GameObject> _children = new List<GameObject>();
-        [SerializeField] private GameObject _prefab;
 
         public bool IsFull => _children.Count == _maxSize;
-
-        private void Start()
-        {
-            AddChild(_prefab, 5);
-        }
 
         public void AddChild(GameObject child, int amount)
         {
