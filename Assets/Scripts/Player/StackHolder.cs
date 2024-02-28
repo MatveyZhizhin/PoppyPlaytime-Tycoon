@@ -13,6 +13,7 @@ namespace Assets.Scripts.Player
         private List<GameObject> _children = new List<GameObject>();
 
         public bool IsFull => _children.Count == _maxSize;
+        public bool ISEmpty => _children.Count == 0;
 
         public void AddChild(GameObject child, int amount)
         {
