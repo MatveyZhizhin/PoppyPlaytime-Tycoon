@@ -1,6 +1,5 @@
-using Assets.Scripts.CottonGarden;
+using System;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Assets.Scripts.CottonGarden
 {
@@ -10,22 +9,22 @@ namespace Assets.Scripts.CottonGarden
         private float _time;
 
         [SerializeField] private Growth _growth;
-        [SerializeField] private Image _timerImage;
 
         private bool _isStarted;
 
-
+        public event Action Started;
+        public event Action<float> Updated;
+        public event Action Ended;
 
         private void Start()
         {
             _time = _startTime;
-            _timerImage.gameObject.SetActive(false);
         }
 
         private void Update()
         {
             if (_isStarted)
-            {
+            {                
                 if (_time <= 0)
                 {
                     _growth.GrowCotton();
@@ -34,20 +33,20 @@ namespace Assets.Scripts.CottonGarden
                 else
                 {
                     _time -= Time.deltaTime;
-                    _timerImage.fillAmount = _time / _startTime;
+                    Updated?.Invoke(_time / _startTime);
                 }
             }
         }
 
         private void StartTimer()
         {
-            _isStarted = true;
-            _timerImage.gameObject.SetActive(true);
+            Started?.Invoke();
+            _isStarted = true;           
         }
         private void EndTimer()
         {
+            Ended?.Invoke();
             _isStarted = false;
-            _timerImage.gameObject.SetActive(false);
         }
 
         private void OnEnable()

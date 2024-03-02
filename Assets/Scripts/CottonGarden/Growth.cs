@@ -7,8 +7,8 @@ namespace Assets.Scripts.CottonGarden
     {
         [SerializeField] private GameObject _cotton;
 
-        public Action Grew;
-        public Action Harvested;
+        public event Action Grew;
+        public event Action Harvested;
 
         public void GrowCotton()
         {

@@ -550,13 +550,14 @@ GameObject:
   - component: {fileID: 5734953684758647059}
   - component: {fileID: 8795966797107805907}
   - component: {fileID: 8219598594203389979}
+  - component: {fileID: 718092585509223583}
   m_Layer: 0
   m_Name: TimerImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6356816280211763031
 RectTransform:
   m_ObjectHideFlags: 0
@@ -628,7 +629,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _startTime: 30
   _growth: {fileID: 1519774441785766110}
-  _timerImage: {fileID: 8795966797107805907}
+--- !u!114 &718092585509223583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6267785246012509326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de841f0de9b7cc24e81b07e7187da7a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6354613729074223160
 GameObject:
   m_ObjectHideFlags: 0

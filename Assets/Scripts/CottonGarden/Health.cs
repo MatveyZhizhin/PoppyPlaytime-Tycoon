@@ -4,7 +4,7 @@ namespace Assets.Scripts.CottonGarden
 {
     public class Health : MonoBehaviour
     {
-        [SerializeField] private int _startHealth;
+        [SerializeField] private int _maxHealth;
         private int _health;
 
         private Growth _growth;
@@ -12,7 +12,12 @@ namespace Assets.Scripts.CottonGarden
         private void Awake()
         {
             _growth = GetComponentInParent<Growth>();
-        }   
+        }
+
+        private void Start()
+        {
+            TakeDamage(_maxHealth);
+        }
 
         public void TakeDamage(int damage)
         {
@@ -26,7 +31,7 @@ namespace Assets.Scripts.CottonGarden
 
         private void OnEnable()
         {
-            _health = _startHealth;
+            _health = _maxHealth;
         }
     }
 }

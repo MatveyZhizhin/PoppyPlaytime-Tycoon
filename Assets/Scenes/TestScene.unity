@@ -1368,6 +1368,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CottonGarden
       objectReference: {fileID: 0}
+    - target: {fileID: 6267785246012509326, guid: 404e49a4d68b0de4da7b96d7fc99068c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
