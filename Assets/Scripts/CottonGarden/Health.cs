@@ -14,11 +14,6 @@ namespace Assets.Scripts.CottonGarden
             _growth = GetComponentInParent<Growth>();
         }
 
-        private void Start()
-        {
-            TakeDamage(_maxHealth);
-        }
-
         public void TakeDamage(int damage)
         {
             _health -= damage;
