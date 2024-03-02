@@ -15,19 +15,19 @@ namespace Assets.Scripts.Player
         public bool IsFull => _children.Count == _maxSize;
         public bool IsEmpty => _children.Count == 0;
 
-        public void AddChild(GameObject child, int amount)
+        public void AddChild(GameObject child, int amount = 1)
         {
             _childSize = child.transform.localScale.y;
             for (int i = 0; i < amount; i++)
             {
-                var newChild = Instantiate(child, _childSpawnPoint.position, Quaternion.identity, transform);
+                var newChild = Instantiate(child, _childSpawnPoint.position, _childSpawnPoint.rotation, transform);
                 _children.Add(newChild.gameObject);
                 var newPointPosition = _childSpawnPoint.localPosition.y + _childSize * 2;
                 ChangeSpawnPointPosition(newPointPosition);
             }
         }
 
-        public void RemoveChild(int amount)
+        public void RemoveChild(int amount = 1)
         {
             if (amount > _children.Count)
                 return;

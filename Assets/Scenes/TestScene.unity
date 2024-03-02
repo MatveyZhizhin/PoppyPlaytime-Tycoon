@@ -515,6 +515,63 @@ MonoBehaviour:
   m_MaximumFOV: 60
   m_MinimumOrthoSize: 1
   m_MaximumOrthoSize: 5000
+--- !u!1001 &360237515
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 924113656535946011, guid: 404e49a4d68b0de4da7b96d7fc99068c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.840335
+      objectReference: {fileID: 0}
+    - target: {fileID: 924113656535946011, guid: 404e49a4d68b0de4da7b96d7fc99068c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5000018
+      objectReference: {fileID: 0}
+    - target: {fileID: 924113656535946011, guid: 404e49a4d68b0de4da7b96d7fc99068c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.894896
+      objectReference: {fileID: 0}
+    - target: {fileID: 924113656535946011, guid: 404e49a4d68b0de4da7b96d7fc99068c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 924113656535946011, guid: 404e49a4d68b0de4da7b96d7fc99068c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 924113656535946011, guid: 404e49a4d68b0de4da7b96d7fc99068c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 924113656535946011, guid: 404e49a4d68b0de4da7b96d7fc99068c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 924113656535946011, guid: 404e49a4d68b0de4da7b96d7fc99068c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 924113656535946011, guid: 404e49a4d68b0de4da7b96d7fc99068c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 924113656535946011, guid: 404e49a4d68b0de4da7b96d7fc99068c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3144133177280261409, guid: 404e49a4d68b0de4da7b96d7fc99068c, type: 3}
+      propertyPath: m_Name
+      value: CottonGarden (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 404e49a4d68b0de4da7b96d7fc99068c, type: 3}
 --- !u!224 &402528100 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8135886326569738822, guid: 56fae09712773584fb63896d473a98ee, type: 3}
@@ -545,6 +602,7 @@ GameObject:
   - component: {fileID: 429876034}
   - component: {fileID: 429876033}
   - component: {fileID: 429876038}
+  - component: {fileID: 429876039}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -683,6 +741,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 7
   _moveJoystick: {fileID: 402528101}
+--- !u!114 &429876039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429876032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e202384aa2b6d94885f998818de99b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 1
+  _punchRate: 2
+  _cottonPiece: {fileID: 8161373292101209106, guid: 54f30e8ebf6d2aa4d85a20c184ca1156, type: 3}
 --- !u!1 &476758547
 GameObject:
   m_ObjectHideFlags: 0
@@ -1032,7 +1105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33afdf348e2e8a2478b4d0b0d2538a6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxSize: 5
+  _maxSize: 10
   _childSpawnPoint: {fileID: 1987821548}
 --- !u!1001 &1474204991
 PrefabInstance:
@@ -1368,10 +1441,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CottonGarden
       objectReference: {fileID: 0}
-    - target: {fileID: 6267785246012509326, guid: 404e49a4d68b0de4da7b96d7fc99068c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1389,3 +1458,4 @@ SceneRoots:
   - {fileID: 144139748}
   - {fileID: 967725029}
   - {fileID: 5411508538164786545}
+  - {fileID: 360237515}
