@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4391787962271806481}
   - component: {fileID: 3680195371392007104}
   - component: {fileID: 267916661414105771}
+  - component: {fileID: 9100869167722659129}
   m_Layer: 0
   m_Name: Manufacturer
   m_TagString: Untagged
@@ -121,7 +122,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _producableToy: {fileID: 904233862605157320, guid: f072b277170871a43bd7d33ffc7c7c4f, type: 3}
   _conveyor: {fileID: 8512763182539743387}
-  _produceRate: 2
+  _produceRate: 5
+--- !u!114 &9100869167722659129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888045663125396376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f8400ddc6bc48046b6ad28b7417b7d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _toyCost: 5
 --- !u!1 &6701041061949444007
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,7 +262,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3361209714284828021, guid: cb1b733167ab91f42bdee29950933102, type: 3}
       propertyPath: OnTransfer.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3361209714284828021, guid: cb1b733167ab91f42bdee29950933102, type: 3}
       propertyPath: OnTransfer.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -257,18 +271,18 @@ PrefabInstance:
     - target: {fileID: 3361209714284828021, guid: cb1b733167ab91f42bdee29950933102, type: 3}
       propertyPath: OnTransfer.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 267916661414105771}
+      objectReference: {fileID: 9100869167722659129}
     - target: {fileID: 3361209714284828021, guid: cb1b733167ab91f42bdee29950933102, type: 3}
       propertyPath: OnTransfer.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3361209714284828021, guid: cb1b733167ab91f42bdee29950933102, type: 3}
       propertyPath: OnTransfer.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Produce
+      value: Pay
       objectReference: {fileID: 0}
     - target: {fileID: 3361209714284828021, guid: cb1b733167ab91f42bdee29950933102, type: 3}
       propertyPath: OnTransfer.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Assets.Scripts.Factory.Manufacturer, Assembly-CSharp
+      value: Assets.Scripts.Money.Payer, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3361209714284828021, guid: cb1b733167ab91f42bdee29950933102, type: 3}
       propertyPath: OnTransfer.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
