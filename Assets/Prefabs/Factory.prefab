@@ -254,7 +254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a36ed06056d20547bb31acd9513cf8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mineRate: 5
+  _mineRate: 10
   _conveyor: {fileID: 8986230589126736702}
   _producableMaterial: {fileID: 904233862605157320, guid: f072b277170871a43bd7d33ffc7c7c4f, type: 3}
 --- !u!1 &6701041061949444007
