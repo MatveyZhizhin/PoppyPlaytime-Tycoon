@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -5,15 +6,23 @@ namespace Assets.Scripts.Player
 {
     public class StackHolder : MonoBehaviour
     {
-        [SerializeField] private int _maxSize;
+        [SerializeField] private int _maxSize;      
 
         private float _childSize;
 
         [SerializeField] private Transform _childSpawnPoint;
+
         private List<GameObject> _children = new List<GameObject>();
+
+        public event Action<int> StackUpdated;
 
         public bool IsFull => _children.Count == _maxSize;
         public bool IsEmpty => _children.Count == 0;
+
+        private void Start()
+        {
+            StackUpdated?.Invoke(_children.Count);
+        }
 
         public void AddChild(GameObject child, int amount = 1)
         {
@@ -24,6 +33,7 @@ namespace Assets.Scripts.Player
                 _children.Add(newChild.gameObject);
                 var newPointPosition = _childSpawnPoint.localPosition.y + _childSize * 2;
                 ChangeSpawnPointPosition(newPointPosition);
+                StackUpdated?.Invoke(_children.Count);
             }
         }
 
@@ -48,6 +58,8 @@ namespace Assets.Scripts.Player
                     ChangeSpawnPointPosition(newPointPosition);
                 }
             }
+
+            StackUpdated?.Invoke(_children.Count);
         }
 
         private void ChangeSpawnPointPosition(float newPostion = 0)
