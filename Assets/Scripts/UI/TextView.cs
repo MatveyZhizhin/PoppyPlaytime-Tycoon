@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace Assets.Scripts.UI
 {
+    [RequireComponent(typeof(ITextUser))]
     public class TextView : MonoBehaviour
     {
         [SerializeField] private TextMeshProUGUI _text;
