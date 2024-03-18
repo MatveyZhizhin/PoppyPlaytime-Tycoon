@@ -1,10 +1,11 @@
+using Assets.Scripts.UI;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace Assets.Scripts.Player
 {
-    public class StackHolder : MonoBehaviour
+    public class StackHolder : MonoBehaviour, ITextUser
     {
         [SerializeField] private int _maxSize;      
 
@@ -14,14 +15,14 @@ namespace Assets.Scripts.Player
 
         private List<GameObject> _children = new List<GameObject>();
 
-        public event Action<int> StackUpdated;
+        public event Action<int> Changed;
 
         public bool IsFull => _children.Count == _maxSize;
         public bool IsEmpty => _children.Count == 0;
 
         private void Start()
         {
-            StackUpdated?.Invoke(_children.Count);
+            Changed?.Invoke(_children.Count);
         }
 
         public void AddChild(GameObject child, int amount = 1)
@@ -33,7 +34,7 @@ namespace Assets.Scripts.Player
                 _children.Add(newChild.gameObject);
                 var newPointPosition = _childSpawnPoint.localPosition.y + _childSize * 2;
                 ChangeSpawnPointPosition(newPointPosition);
-                StackUpdated?.Invoke(_children.Count);
+                Changed?.Invoke(_children.Count);
             }
         }
 
@@ -59,7 +60,7 @@ namespace Assets.Scripts.Player
                 }
             }
 
-            StackUpdated?.Invoke(_children.Count);
+            Changed?.Invoke(_children.Count);
         }
 
         private void ChangeSpawnPointPosition(float newPostion = 0)
