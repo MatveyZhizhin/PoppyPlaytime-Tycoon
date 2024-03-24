@@ -17,7 +17,10 @@ namespace Assets.Scripts.Player
 
         public event Action<int> Changed;
 
+        public int MaxSize { get => _maxSize; set => _maxSize = value; }
+
         public bool IsFull => _children.Count == _maxSize;
+
         public bool IsEmpty => _children.Count == 0;
 
         private void Start()
