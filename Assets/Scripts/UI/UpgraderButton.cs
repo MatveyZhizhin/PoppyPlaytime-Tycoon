@@ -5,7 +5,7 @@ using Assets.Scripts.Money;
 
 namespace Assets.Scripts.UI
 {
-    [RequireComponent(typeof(Upgrader), typeof(Button))]
+    [RequireComponent(typeof(Button))]
     public class UpgraderButton : MonoBehaviour
     {
         private Upgrader _upgrader;

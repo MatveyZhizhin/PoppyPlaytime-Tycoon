@@ -14,6 +14,9 @@ namespace Assets.Scripts.Upgrades
 
         public override void Upgrade(MoneyBalance moneyBalance)
         {
+            if (moneyBalance.Balance < _cost)
+                return;
+
             base.Upgrade(moneyBalance);
 
             _stackHolder.MaxSize += _upgradeValue;
