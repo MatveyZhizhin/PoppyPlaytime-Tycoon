@@ -19,6 +19,8 @@ namespace Assets.Scripts.Player
 
         public int MaxSize { get => _maxSize; set => _maxSize = value; }
 
+        public int RemainingSpace => _maxSize - _children.Count;
+
         public bool IsFull => _children.Count == _maxSize;
 
         public bool IsEmpty => _children.Count == 0;
