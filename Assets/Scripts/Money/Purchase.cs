@@ -19,7 +19,7 @@ namespace Assets.Scripts.Money
 
         public void Buy(MoneyBalance moneyBalance)
         {
-            if (moneyBalance.Balance < _cost)
+            if (!moneyBalance.HasMoney(_cost))
                 return;
 
             moneyBalance.SpendMoney(_cost);

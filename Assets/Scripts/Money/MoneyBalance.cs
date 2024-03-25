@@ -8,7 +8,7 @@ namespace Assets.Scripts.Money
     {
         [SerializeField] private int _balance;
 
-        public int Balance => _balance;
+        public bool HasMoney(int money) => _balance >= money;
 
         public event Action<int> Changed;
 
@@ -24,7 +24,7 @@ namespace Assets.Scripts.Money
         }
 
         public void SpendMoney(int money)
-        {
+        {         
             _balance -= money;
             Changed?.Invoke(_balance);
         }

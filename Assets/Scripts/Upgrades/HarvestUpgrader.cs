@@ -3,13 +3,13 @@ using Assets.Scripts.Player;
 
 namespace Assets.Scripts.Upgrades
 {
-    public class StackHolderUpgrader : Upgrader
+    public class HarvestUpgrader : Upgrader
     {
-        private StackHolder _stackHolder;
+        private Harvest _harvest;
 
         private void Awake()
         {
-            _stackHolder = FindObjectOfType<StackHolder>();
+            _harvest = FindObjectOfType<Harvest>();
         }
 
         public override void Upgrade(MoneyBalance moneyBalance)
@@ -18,8 +18,7 @@ namespace Assets.Scripts.Upgrades
                 return;
 
             base.Upgrade(moneyBalance);
-
-            _stackHolder.MaxSize += _upgradeValue;
+            _harvest.Damage += _upgradeValue;
         }
     }
 }

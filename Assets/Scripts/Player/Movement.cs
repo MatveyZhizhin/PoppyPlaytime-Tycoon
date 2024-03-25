@@ -10,6 +10,8 @@ namespace Assets.Scripts.Player
         private Rigidbody _playerRigidbody;
         [SerializeField] private Joystick _moveJoystick;
 
+        public Joystick Joystick => _moveJoystick;
+
         private void Awake()
         {
             TryGetComponent(out _playerRigidbody);

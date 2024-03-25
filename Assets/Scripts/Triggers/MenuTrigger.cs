@@ -1,5 +1,5 @@
 using Assets.Scripts.Player;
-using Assets.Scripts.UI.Menu;
+using Assets.Scripts.UI;
 using UnityEngine;
 
 namespace Assets.Scripts.Triggers

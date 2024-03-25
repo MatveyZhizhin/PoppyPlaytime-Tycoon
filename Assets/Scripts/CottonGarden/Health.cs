@@ -8,6 +8,8 @@ namespace Assets.Scripts.CottonGarden
         [SerializeField] private int _maxHealth;
         private int _health;
 
+        public int GardenHealth => _health;
+
         private Growth _growth;
 
         private void Awake()

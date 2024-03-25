@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Assets.Scripts.UI.Menu
+namespace Assets.Scripts.UI
 {
     public class MenuActivator : MonoBehaviour
     {
@@ -9,6 +9,11 @@ namespace Assets.Scripts.UI.Menu
         public void EnableMenu()
         {
             _menu.SetActive(true);
+        }
+
+        public void DisableMenu()
+        {
+            _menu.SetActive(false);
         }
     }
 }
