@@ -150,6 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _cost: 10
   _upgradeValue: 5
+  _costMultiplier: 2
 --- !u!114 &6797089586777369472
 MonoBehaviour:
   m_ObjectHideFlags: 0

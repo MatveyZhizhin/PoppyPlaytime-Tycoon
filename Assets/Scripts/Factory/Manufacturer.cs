@@ -10,6 +10,8 @@ namespace Assets.Scripts.Factory
 
         [SerializeField] private float _produceRate;
 
+        public float ProduceRate { get => _produceRate; set => _produceRate = value; }
+
         public void Produce()
         {
             _conveyor.StartCoroutine(_conveyor.Transfer(_producableToy, _produceRate));

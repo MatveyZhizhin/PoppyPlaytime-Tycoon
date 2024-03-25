@@ -6,6 +6,8 @@ namespace Assets.Scripts.Money
     {
         [SerializeField] private int _toyCost;
 
+        public int ToyCost { get => _toyCost; set => _toyCost = value; }
+
         private MoneyBalance _moneyBalance;
 
         private void Awake()
