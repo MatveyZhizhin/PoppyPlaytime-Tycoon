@@ -8,6 +8,8 @@ namespace Assets.Scripts.Factory
     {
         [SerializeField] private float _mineRate;
 
+        public float MineRate { get => _mineRate; set => _mineRate = value; }
+
         [SerializeField] private ConveyorLine _conveyor;
         [SerializeField] private Transportable _producableMaterial;
 

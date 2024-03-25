@@ -145,8 +145,6 @@ GameObject:
   - component: {fileID: 7829883874766017991}
   - component: {fileID: 2715816685508661793}
   - component: {fileID: 3126508465810033110}
-  - component: {fileID: 6627571458177601846}
-  - component: {fileID: 7195187138510140557}
   m_Layer: 0
   m_Name: UpgraderTrigger
   m_TagString: Untagged
@@ -203,37 +201,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f8519eb4fb4b664a8c66955897caea2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6627571458177601846
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4092022779201285566}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00f4ea351800b13479fa30d4949d8c8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cost: 20
-  _upgradeValue: 1
-  _costMultiplier: 2
-  _manufacturer: {fileID: 0}
-  _payer: {fileID: 0}
-  _toyCostUpgradeValue: 3
---- !u!114 &7195187138510140557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4092022779201285566}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c32a249c74808f49962fa8726b85032, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _text: {fileID: 4253776670653900524}
 --- !u!1 &4530317879288165079
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,7 +214,7 @@ GameObject:
   - component: {fileID: 366120280347488824}
   - component: {fileID: 8092833295562636871}
   m_Layer: 0
-  m_Name: PurchaseCanvas (1)
+  m_Name: UpgraderCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

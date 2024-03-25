@@ -7,6 +7,8 @@ namespace Assets.Scripts.Factory.Conveyor
     {       
         [SerializeField] private float _moveSpeed;
 
+        public float Speed { get => _moveSpeed; set => _moveSpeed = value; }
+
         [SerializeField] private Transform _spawnPoint;
 
         public IEnumerator Transfer(Transportable transportable, float waitTime)
