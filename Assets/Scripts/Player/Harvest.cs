@@ -30,16 +30,16 @@ namespace Assets.Scripts.Player
 
         private void Hit(Health gardenHealth)
         {
-            if (_stackHolder.RemainingSpace < gardenHealth.GardenHealth)
-            {
-                gardenHealth.TakeDamage(_stackHolder.RemainingSpace);
-                _stackHolder.AddChild(_cottonPiece, _stackHolder.RemainingSpace);
-                return;
-            }
+            int damage;
 
             if (gardenHealth.GardenHealth < _damage)
             {
-                _stackHolder.AddChild(_cottonPiece, gardenHealth.GardenHealth);
+                if (_stackHolder.RemainingSpace < gardenHealth.GardenHealth)
+                {
+                    damage = _stackHolder.RemainingSpace;
+                }
+
+                damage = gardenHealth.GardenHealth;
             }
             else
             {
