@@ -8,7 +8,7 @@ namespace Assets.Scripts.Upgrades
     public class Upgrader : MonoBehaviour, ITextUser
     {
         [SerializeField] protected int _cost;
-        [SerializeField] protected int _upgradeValue;
+        [SerializeField] protected float _upgradeValue;
 
         [SerializeField] private int _costMultiplier;
 

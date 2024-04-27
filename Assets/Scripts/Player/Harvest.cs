@@ -12,7 +12,7 @@ namespace Assets.Scripts.Player
         private StackHolder _stackHolder;
         [SerializeField] private GameObject _cottonPiece;
 
-        public int Damage { get => _damage; set => _damage = value; }
+        public float PunchRate { get => _punchRate; set => _punchRate = value; }
 
         private void Awake()
         {
@@ -24,28 +24,13 @@ namespace Assets.Scripts.Player
             while (!_stackHolder.IsFull)
             {
                 yield return new WaitForSeconds(_punchRate);
+                _stackHolder.AddChild(_cottonPiece, _damage);
                 Hit(gardenHealth);
             }
         }
 
         private void Hit(Health gardenHealth)
         {
-            int damage;
-
-            if (gardenHealth.GardenHealth < _damage)
-            {
-                if (_stackHolder.RemainingSpace < gardenHealth.GardenHealth)
-                {
-                    damage = _stackHolder.RemainingSpace;
-                }
-
-                damage = gardenHealth.GardenHealth;
-            }
-            else
-            {
-                _stackHolder.AddChild(_cottonPiece, _damage);
-            }
-
             gardenHealth.TakeDamage(_damage);
         }
     }

@@ -19,7 +19,7 @@ namespace Assets.Scripts.Upgrades
 
             base.Upgrade(moneyBalance);
 
-            _stackHolder.MaxSize += _upgradeValue;
+            _stackHolder.MaxSize += (int)_upgradeValue;
         }
     }
 }

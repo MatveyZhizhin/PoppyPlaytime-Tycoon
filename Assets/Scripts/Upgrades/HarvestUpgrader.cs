@@ -18,7 +18,8 @@ namespace Assets.Scripts.Upgrades
                 return;
 
             base.Upgrade(moneyBalance);
-            _harvest.Damage += _upgradeValue;
+
+            _harvest.PunchRate -= _upgradeValue;
         }
     }
 }
