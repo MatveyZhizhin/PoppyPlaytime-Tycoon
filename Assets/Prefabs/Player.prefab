@@ -710,9 +710,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 17.150496
-  m_Height: 63.974022
+  m_Height: 61.40199
   m_Direction: 1
-  m_Center: {x: 2.5833404, y: 27.666119, z: 5.085591}
+  m_Center: {x: 2.5833404, y: 28.952135, z: 5.085591}
 --- !u!114 &4160938127267178168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2237,7 +2237,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -5728197680097314551, guid: 52fa8a7294466614aa6f87d82e368211, type: 3}
+  - {fileID: 2100000, guid: f40e41740afd10749b9d4fbabd3cb00c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2821,8 +2821,8 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -7791486788655378091, guid: 52fa8a7294466614aa6f87d82e368211, type: 3}
-  - {fileID: 6664358993437552698, guid: 52fa8a7294466614aa6f87d82e368211, type: 3}
+  - {fileID: 2100000, guid: 9ceb13848a5623e45bf0ba568ca04387, type: 2}
+  - {fileID: 2100000, guid: 90af45fb35d4e7a4f9d0de11d3712034, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

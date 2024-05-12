@@ -10,23 +10,23 @@ namespace Assets.Scripts.Money
 
         public bool HasMoney(int money) => _balance >= money;
 
-        public event Action<int> Changed;
+        public event Action<string> Changed;
 
         private void Start()
         {
-            Changed?.Invoke(_balance);
+            Changed?.Invoke(_balance.ToString());
         }
 
         public void AddMoney(int money)
         {
             _balance += money;
-            Changed?.Invoke(_balance);
+            Changed?.Invoke(_balance.ToString());
         }
 
         public void SpendMoney(int money)
         {         
             _balance -= money;
-            Changed?.Invoke(_balance);
+            Changed?.Invoke(_balance.ToString());
         }
     }
 }

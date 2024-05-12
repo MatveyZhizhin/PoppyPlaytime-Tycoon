@@ -28,7 +28,7 @@ namespace Assets.Scripts.Player
             var moveSpeed = moveInput.normalized * _speed;
 
             transform.LookAt(moveInput + transform.position);
-            _playerRigidbody.MovePosition(transform.position + moveSpeed * Time.fixedDeltaTime);
+            _playerRigidbody.velocity = moveSpeed;
         }
     }
 }

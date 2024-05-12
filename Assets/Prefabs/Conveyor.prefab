@@ -630,6 +630,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _cost: 3
   _upgradeValue: 1
+  _maxLevel: 5
   _costMultiplier: 2
   _conveyor: {fileID: 4961152875513019757}
 --- !u!114 &2486192104854439667

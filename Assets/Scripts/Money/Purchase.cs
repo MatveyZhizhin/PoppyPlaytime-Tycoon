@@ -10,11 +10,11 @@ namespace Assets.Scripts.Money
 
         [SerializeField] private GameObject _purchasedObject;
 
-        public event Action<int> Changed;
+        public event Action<string> Changed;
 
         private void Start()
         {
-            Changed?.Invoke(_cost);
+            Changed?.Invoke(_cost.ToString());
         }
 
         public void Buy(MoneyBalance moneyBalance)

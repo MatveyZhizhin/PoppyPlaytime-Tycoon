@@ -14,9 +14,9 @@ namespace Assets.Scripts.UI
             TryGetComponent(out _textUser);
         }
 
-        private void DisplayText(int value)
+        private void DisplayText(string text)
         {
-            _text.SetText(value.ToString());
+            _text.SetText(text);
         }
 
         private void OnEnable()

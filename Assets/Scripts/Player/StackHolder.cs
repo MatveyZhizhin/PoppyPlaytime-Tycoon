@@ -15,7 +15,7 @@ namespace Assets.Scripts.Player
 
         private List<GameObject> _children = new List<GameObject>();
 
-        public event Action<int> Changed;
+        public event Action<string> Changed;
 
         public int MaxSize { get => _maxSize; set => _maxSize = value; }
 
@@ -27,7 +27,7 @@ namespace Assets.Scripts.Player
 
         private void Start()
         {
-            Changed?.Invoke(_children.Count);
+            Changed?.Invoke(_children.Count.ToString());
         }
 
         public void AddChild(GameObject child, int amount = 1)
@@ -39,7 +39,7 @@ namespace Assets.Scripts.Player
                 _children.Add(newChild.gameObject);
                 var newPointPosition = _childSpawnPoint.localPosition.y + _childSize * 2;
                 ChangeSpawnPointPosition(newPointPosition);
-                Changed?.Invoke(_children.Count);
+                Changed?.Invoke(_children.Count.ToString());
             }
         }
 
@@ -65,7 +65,7 @@ namespace Assets.Scripts.Player
                 }
             }
 
-            Changed?.Invoke(_children.Count);
+            Changed?.Invoke(_children.Count.ToString());
         }
 
         private void ChangeSpawnPointPosition(float newPostion = 0)

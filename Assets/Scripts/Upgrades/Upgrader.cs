@@ -10,20 +10,31 @@ namespace Assets.Scripts.Upgrades
         [SerializeField] protected int _cost;
         [SerializeField] protected float _upgradeValue;
 
+        [SerializeField] private int _maxLevel;
+        private int _currentLevel = 1;
+
+        protected bool _isMaxLevel => _currentLevel == _maxLevel;
+
         [SerializeField] private int _costMultiplier;
 
-        public event Action<int> Changed;
+        public event Action<string> Changed;
 
         private void Start()
         {
-            Changed?.Invoke(_cost);
+            Changed?.Invoke(_cost.ToString());
         }
 
         public virtual void Upgrade(MoneyBalance moneyBalance)
         {
             moneyBalance.SpendMoney(_cost);
             _cost *= _costMultiplier;
-            Changed?.Invoke(_cost);
+            _currentLevel++; 
+            if (_isMaxLevel)
+            {
+                Changed?.Invoke("Макс.");
+                return;
+            }
+            Changed?.Invoke(_cost.ToString());           
         }
     }
 }

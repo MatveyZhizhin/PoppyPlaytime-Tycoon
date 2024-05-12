@@ -149,6 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _cost: 5
   _upgradeValue: 0.5
+  _maxLevel: 4
   _costMultiplier: 2
 --- !u!114 &2899405229039427128
 MonoBehaviour:

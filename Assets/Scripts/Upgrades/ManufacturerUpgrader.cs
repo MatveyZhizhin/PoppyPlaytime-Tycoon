@@ -13,7 +13,7 @@ namespace Assets.Scripts.Upgrades
 
         public override void Upgrade(MoneyBalance moneyBalance)
         {
-            if (!moneyBalance.HasMoney(_cost))
+            if (!moneyBalance.HasMoney(_cost) || _isMaxLevel)
                 return;
             
             base.Upgrade(moneyBalance);
