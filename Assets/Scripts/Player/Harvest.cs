@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using Assets.Scripts.CottonGarden;
+using Assets.Scripts.Animations.AnimatorsConstans;
 
 namespace Assets.Scripts.Player
 {
@@ -10,6 +11,9 @@ namespace Assets.Scripts.Player
         [SerializeField] private float _punchRate;
 
         private StackHolder _stackHolder;
+        private Animator _playerAnimator;
+        private Health _gardenHealth;
+
         [SerializeField] private GameObject _cottonPiece;
 
         public float PunchRate { get => _punchRate; set => _punchRate = value; }
@@ -17,21 +21,23 @@ namespace Assets.Scripts.Player
         private void Awake()
         {
             _stackHolder = FindObjectOfType<StackHolder>();
+            TryGetComponent(out _playerAnimator);
         }
 
         public IEnumerator HarvestCotton(Health gardenHealth)
         {          
+            _gardenHealth = gardenHealth;
             while (!_stackHolder.IsFull)
             {
                 yield return new WaitForSeconds(_punchRate);
                 _stackHolder.AddChild(_cottonPiece, _damage);
-                Hit(gardenHealth);
+                _playerAnimator.SetTrigger(PlayerAnimationConstans.Harvest);
             }
         }
 
-        private void Hit(Health gardenHealth)
+        private void Hit()
         {
-            gardenHealth.TakeDamage(_damage);
+            _gardenHealth.TakeDamage(_damage);
         }
     }
 }

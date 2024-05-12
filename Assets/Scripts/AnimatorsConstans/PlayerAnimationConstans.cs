@@ -1,6 +1,9 @@
 
-public static class PlayerAnimationConstans
+namespace Assets.Scripts.Animations.AnimatorsConstans
 {
-    public const string IsRunning = nameof(IsRunning);
-    public const string Harvest = nameof(Harvest);
+    public static class PlayerAnimationConstans
+    {
+        public const string IsRunning = nameof(IsRunning);
+        public const string Harvest = nameof(Harvest);
+    }
 }
