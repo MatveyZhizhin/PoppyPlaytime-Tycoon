@@ -9,6 +9,7 @@ namespace Assets.Scripts.Money
         [SerializeField] private int _cost;
 
         [SerializeField] private GameObject _purchasedObject;
+        [SerializeField] private ParticleSystem _purchaseEffect;
 
         public event Action<string> Changed;
 
@@ -23,6 +24,7 @@ namespace Assets.Scripts.Money
                 return;
 
             moneyBalance.SpendMoney(_cost);
+            Instantiate(_purchaseEffect, transform.position, _purchaseEffect.transform.rotation);
             _purchasedObject.SetActive(true);
             gameObject.SetActive(false);
         }

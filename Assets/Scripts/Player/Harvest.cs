@@ -28,8 +28,9 @@ namespace Assets.Scripts.Player
         {          
             _gardenHealth = gardenHealth;
             while (!_stackHolder.IsFull)
-            {
+            {               
                 yield return new WaitForSeconds(_punchRate);
+                transform.LookAt(gardenHealth.transform.position);
                 _stackHolder.AddChild(_cottonPiece, _damage);
                 _playerAnimator.SetTrigger(PlayerAnimationConstans.Harvest);
             }

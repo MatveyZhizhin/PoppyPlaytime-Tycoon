@@ -1378,6 +1378,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4253776670653900524, guid: f9a78cf144d3108459193ea6f03e0b7f, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: d8ad191bb4bae8847a475301b51fc9a2, type: 2}
+    - target: {fileID: 4253776670653900524, guid: f9a78cf144d3108459193ea6f03e0b7f, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 5141095606717135518, guid: d8ad191bb4bae8847a475301b51fc9a2, type: 2}
+    - target: {fileID: 4253776670653900524, guid: f9a78cf144d3108459193ea6f03e0b7f, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7829883874766017991, guid: f9a78cf144d3108459193ea6f03e0b7f, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.33971974
@@ -1430,6 +1442,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8519700718137852655, guid: f9a78cf144d3108459193ea6f03e0b7f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.0677
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1460,6 +1476,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _cost: 15
   _upgradeValue: 2
+  _maxLevel: 0
   _costMultiplier: 2
   _cottonMiner: {fileID: 2535909885331289063}
 --- !u!114 &363149779227479331
