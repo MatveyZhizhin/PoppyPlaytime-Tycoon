@@ -15,6 +15,8 @@ namespace Assets.Scripts.Player
         private Health _gardenHealth;
 
         [SerializeField] private GameObject _cottonPiece;
+        [SerializeField] private ParticleSystem _hitEffect;
+        [SerializeField] private Transform _effectSpawnPoint;
 
         public float PunchRate { get => _punchRate; set => _punchRate = value; }
 
@@ -23,6 +25,7 @@ namespace Assets.Scripts.Player
             _stackHolder = FindObjectOfType<StackHolder>();
             TryGetComponent(out _playerAnimator);
         }
+
 
         public IEnumerator HarvestCotton(Health gardenHealth)
         {          
@@ -39,6 +42,7 @@ namespace Assets.Scripts.Player
         private void Hit()
         {
             _gardenHealth.TakeDamage(_damage);
+            Instantiate(_hitEffect, _effectSpawnPoint.position, _effectSpawnPoint.rotation);
         }
     }
 }
