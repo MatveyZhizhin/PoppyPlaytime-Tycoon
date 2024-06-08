@@ -10,6 +10,7 @@ namespace Assets.Scripts.Money
 
         [SerializeField] private GameObject _purchasedObject;
         [SerializeField] private ParticleSystem _purchaseEffect;
+        [SerializeField] private AudioSource _purchaseSound;
 
         public event Action<string> Changed;
 
@@ -24,6 +25,7 @@ namespace Assets.Scripts.Money
                 return;
 
             moneyBalance.SpendMoney(_cost);
+            Instantiate(_purchaseSound, transform.position, Quaternion.identity);
             Instantiate(_purchaseEffect, transform.position, _purchaseEffect.transform.rotation);
             _purchasedObject.SetActive(true);
             gameObject.SetActive(false);

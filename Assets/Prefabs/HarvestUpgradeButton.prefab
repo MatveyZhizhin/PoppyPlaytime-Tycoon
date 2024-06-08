@@ -150,6 +150,7 @@ MonoBehaviour:
   _cost: 5
   _upgradeValue: 0.5
   _maxLevel: 9
+  _upgradeSound: {fileID: 2801260550612536082, guid: 2f006758469e02c44be79381667232d9, type: 3}
   _costMultiplier: 2
 --- !u!114 &2899405229039427128
 MonoBehaviour:

@@ -251,6 +251,7 @@ MonoBehaviour:
   _cost: 10
   _purchasedObject: {fileID: 0}
   _purchaseEffect: {fileID: 4855943271083432824, guid: 15b6d0a6ef936d74da48b216434fe217, type: 3}
+  _purchaseSound: {fileID: 2801260550612536082, guid: 2f006758469e02c44be79381667232d9, type: 3}
 --- !u!114 &1231078131065095647
 MonoBehaviour:
   m_ObjectHideFlags: 0

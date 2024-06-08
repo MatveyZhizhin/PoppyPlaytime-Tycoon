@@ -731,6 +731,7 @@ MonoBehaviour:
   _cottonPiece: {fileID: 8161373292101209106, guid: 54f30e8ebf6d2aa4d85a20c184ca1156, type: 3}
   _hitEffect: {fileID: 7252018415193240826, guid: 3d362c1772d4bca4899a920ba5ac2e35, type: 3}
   _effectSpawnPoint: {fileID: 1553761050683579975}
+  _harvestSound: {fileID: 1180887445614189382, guid: 36edba7fc7dd2504ebdc2f417ed60971, type: 3}
 --- !u!114 &7963629582044294665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2382,13 +2383,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6867391615017636980}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0.13052596, y: -0, z: -0, w: 0.99144495}
   m_LocalPosition: {x: 0, y: 37.150856, z: 29.720686}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1566226612007543447}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -15, y: 0, z: 0}
 --- !u!1 &6896253441207700686
 GameObject:
   m_ObjectHideFlags: 0

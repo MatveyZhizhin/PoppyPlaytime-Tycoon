@@ -17,6 +17,7 @@ namespace Assets.Scripts.Player
         [SerializeField] private GameObject _cottonPiece;
         [SerializeField] private ParticleSystem _hitEffect;
         [SerializeField] private Transform _effectSpawnPoint;
+        [SerializeField] private AudioSource _harvestSound;
 
         public float PunchRate { get => _punchRate; set => _punchRate = value; }
 
@@ -36,6 +37,7 @@ namespace Assets.Scripts.Player
                 transform.LookAt(gardenHealth.transform.position);
                 _stackHolder.AddChild(_cottonPiece, _damage);
                 _playerAnimator.SetTrigger(PlayerAnimationConstans.Harvest);
+                Instantiate(_harvestSound, transform.position, Quaternion.identity);
             }
         }
 

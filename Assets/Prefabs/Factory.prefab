@@ -735,6 +735,7 @@ MonoBehaviour:
   _cost: 20
   _upgradeValue: 1
   _maxLevel: 5
+  _upgradeSound: {fileID: 2801260550612536082, guid: 2f006758469e02c44be79381667232d9, type: 3}
   _costMultiplier: 2
   _manufacturer: {fileID: 7605733674476054537}
   _payer: {fileID: 4786783404566061965}
@@ -770,22 +771,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3802846820165497152}
     m_Modifications:
-    - target: {fileID: 877820414652298209, guid: c92c91bbb72d4b94097f0bd9e74c98bd, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2.0677
-      objectReference: {fileID: 0}
-    - target: {fileID: 877820414652298209, guid: c92c91bbb72d4b94097f0bd9e74c98bd, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.000000007822132
-      objectReference: {fileID: 0}
-    - target: {fileID: 877820414652298209, guid: c92c91bbb72d4b94097f0bd9e74c98bd, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 877820414652298209, guid: c92c91bbb72d4b94097f0bd9e74c98bd, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -22.755558
-      objectReference: {fileID: 0}
     - target: {fileID: 1523858645351744582, guid: c92c91bbb72d4b94097f0bd9e74c98bd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.0988712
@@ -831,28 +816,11 @@ PrefabInstance:
       value: MinerPurchaseTrigger
       objectReference: {fileID: 0}
     - target: {fileID: 3973826379540872510, guid: c92c91bbb72d4b94097f0bd9e74c98bd, type: 3}
-      propertyPath: _cost
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 3973826379540872510, guid: c92c91bbb72d4b94097f0bd9e74c98bd, type: 3}
       propertyPath: _purchasedObject
       value: 
       objectReference: {fileID: 7088181762352358576}
-    - target: {fileID: 7512447045580365694, guid: c92c91bbb72d4b94097f0bd9e74c98bd, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: d8ad191bb4bae8847a475301b51fc9a2, type: 2}
-    - target: {fileID: 7512447045580365694, guid: c92c91bbb72d4b94097f0bd9e74c98bd, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 5141095606717135518, guid: d8ad191bb4bae8847a475301b51fc9a2, type: 2}
-    - target: {fileID: 7512447045580365694, guid: c92c91bbb72d4b94097f0bd9e74c98bd, type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 3882877792336325271, guid: c92c91bbb72d4b94097f0bd9e74c98bd, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c92c91bbb72d4b94097f0bd9e74c98bd, type: 3}
@@ -879,11 +847,31 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: d8ad191bb4bae8847a475301b51fc9a2, type: 2}
     - target: {fileID: 3424515291497932603, guid: 5d186addf1a50cc46af1b81aede77832, type: 3}
       propertyPath: m_hasFontAssetChanged
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4735165890512206274, guid: 5d186addf1a50cc46af1b81aede77832, type: 3}
       propertyPath: _maxLevel
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4735165890512206274, guid: 5d186addf1a50cc46af1b81aede77832, type: 3}
+      propertyPath: _upgradeSound
+      value: 
+      objectReference: {fileID: 2801260550612536082, guid: 2f006758469e02c44be79381667232d9, type: 3}
+    - target: {fileID: 7994667907663169672, guid: 5d186addf1a50cc46af1b81aede77832, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 29.976
+      objectReference: {fileID: 0}
+    - target: {fileID: 7994667907663169672, guid: 5d186addf1a50cc46af1b81aede77832, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.353
+      objectReference: {fileID: 0}
+    - target: {fileID: 7994667907663169672, guid: 5d186addf1a50cc46af1b81aede77832, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.2873
+      objectReference: {fileID: 0}
+    - target: {fileID: 7994667907663169672, guid: 5d186addf1a50cc46af1b81aede77832, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.444
       objectReference: {fileID: 0}
     - target: {fileID: 8541337384311218951, guid: 5d186addf1a50cc46af1b81aede77832, type: 3}
       propertyPath: m_Name
@@ -891,7 +879,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8541337384311218951, guid: 5d186addf1a50cc46af1b81aede77832, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8658016618254111760, guid: 5d186addf1a50cc46af1b81aede77832, type: 3}
       propertyPath: m_LocalPosition.x
@@ -984,6 +972,10 @@ PrefabInstance:
       propertyPath: _conveyor
       value: 
       objectReference: {fileID: 6002950046418060959}
+    - target: {fileID: 1080701447517902801, guid: 48e34ee9fbe17c34c9f7be5aca0823b6, type: 3}
+      propertyPath: _upgradeSound
+      value: 
+      objectReference: {fileID: 2801260550612536082, guid: 2f006758469e02c44be79381667232d9, type: 3}
     - target: {fileID: 2198960952424589522, guid: 48e34ee9fbe17c34c9f7be5aca0823b6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.009000023
@@ -1129,6 +1121,10 @@ PrefabInstance:
       propertyPath: _conveyor
       value: 
       objectReference: {fileID: 2612549750114684967}
+    - target: {fileID: 1080701447517902801, guid: 48e34ee9fbe17c34c9f7be5aca0823b6, type: 3}
+      propertyPath: _upgradeSound
+      value: 
+      objectReference: {fileID: 2801260550612536082, guid: 2f006758469e02c44be79381667232d9, type: 3}
     - target: {fileID: 2904109058036353310, guid: 48e34ee9fbe17c34c9f7be5aca0823b6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.31533074

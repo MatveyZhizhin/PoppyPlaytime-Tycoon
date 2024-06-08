@@ -1158,7 +1158,7 @@ Transform:
   m_GameObject: {fileID: 8541337384311218951}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.13052596, z: -0, w: 0.99144495}
-  m_LocalPosition: {x: 1.9068841, y: -0.185, z: -0.7832067}
+  m_LocalPosition: {x: 1.9068841, y: 0.315, z: -0.7832067}
   m_LocalScale: {x: 3.828155, y: 6.380258, z: 3.828155}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1179,6 +1179,7 @@ Transform:
   - {fileID: 3460381943219767395}
   - {fileID: 8658016618254111760}
   - {fileID: 6318212943832075531}
+  - {fileID: 7284812419272298100}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -15, z: 0}
 --- !u!114 &2535909885331289063
@@ -1362,6 +1363,84 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1001 &381269528411471589
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 9062154719577913789}
+    m_Modifications:
+    - target: {fileID: 4098575044699743598, guid: 404e49a4d68b0de4da7b96d7fc99068c, type: 3}
+      propertyPath: m_Name
+      value: CottonGarden
+      objectReference: {fileID: 0}
+    - target: {fileID: 6940698837777461393, guid: 404e49a4d68b0de4da7b96d7fc99068c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.6071918
+      objectReference: {fileID: 0}
+    - target: {fileID: 6940698837777461393, guid: 404e49a4d68b0de4da7b96d7fc99068c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.164315
+      objectReference: {fileID: 0}
+    - target: {fileID: 6940698837777461393, guid: 404e49a4d68b0de4da7b96d7fc99068c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.6071918
+      objectReference: {fileID: 0}
+    - target: {fileID: 6940698837777461393, guid: 404e49a4d68b0de4da7b96d7fc99068c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.4683556
+      objectReference: {fileID: 0}
+    - target: {fileID: 6940698837777461393, guid: 404e49a4d68b0de4da7b96d7fc99068c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.20610452
+      objectReference: {fileID: 0}
+    - target: {fileID: 6940698837777461393, guid: 404e49a4d68b0de4da7b96d7fc99068c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.23337692
+      objectReference: {fileID: 0}
+    - target: {fileID: 6940698837777461393, guid: 404e49a4d68b0de4da7b96d7fc99068c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9659257
+      objectReference: {fileID: 0}
+    - target: {fileID: 6940698837777461393, guid: 404e49a4d68b0de4da7b96d7fc99068c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6940698837777461393, guid: 404e49a4d68b0de4da7b96d7fc99068c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.25881946
+      objectReference: {fileID: 0}
+    - target: {fileID: 6940698837777461393, guid: 404e49a4d68b0de4da7b96d7fc99068c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6940698837777461393, guid: 404e49a4d68b0de4da7b96d7fc99068c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6940698837777461393, guid: 404e49a4d68b0de4da7b96d7fc99068c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6940698837777461393, guid: 404e49a4d68b0de4da7b96d7fc99068c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7027328016144550221, guid: 404e49a4d68b0de4da7b96d7fc99068c, type: 3}
+    - {fileID: 1526475767088571014, guid: 404e49a4d68b0de4da7b96d7fc99068c, type: 3}
+    m_RemovedGameObjects:
+    - {fileID: 5034992364312508996, guid: 404e49a4d68b0de4da7b96d7fc99068c, type: 3}
+    - {fileID: 4443711148738675049, guid: 404e49a4d68b0de4da7b96d7fc99068c, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 404e49a4d68b0de4da7b96d7fc99068c, type: 3}
+--- !u!4 &7284812419272298100 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6940698837777461393, guid: 404e49a4d68b0de4da7b96d7fc99068c, type: 3}
+  m_PrefabInstance: {fileID: 381269528411471589}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1481158554978861527
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1477,6 +1556,7 @@ MonoBehaviour:
   _cost: 15
   _upgradeValue: 2
   _maxLevel: 0
+  _upgradeSound: {fileID: 2801260550612536082, guid: 2f006758469e02c44be79381667232d9, type: 3}
   _costMultiplier: 2
   _cottonMiner: {fileID: 2535909885331289063}
 --- !u!114 &363149779227479331

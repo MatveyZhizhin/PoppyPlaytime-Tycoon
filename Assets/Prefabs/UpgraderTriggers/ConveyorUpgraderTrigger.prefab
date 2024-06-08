@@ -217,6 +217,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _cost: 3
   _upgradeValue: 1
+  _maxLevel: 0
+  _upgradeSound: {fileID: 2801260550612536082, guid: 2f006758469e02c44be79381667232d9, type: 3}
   _costMultiplier: 2
   _conveyor: {fileID: 0}
 --- !u!114 &7378189934571969066

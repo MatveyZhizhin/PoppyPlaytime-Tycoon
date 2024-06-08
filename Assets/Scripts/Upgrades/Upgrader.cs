@@ -13,6 +13,8 @@ namespace Assets.Scripts.Upgrades
         [SerializeField] private int _maxLevel;
         private int _currentLevel = 1;
 
+        [SerializeField] private AudioSource _upgradeSound;
+
         protected bool _isMaxLevel => _currentLevel == _maxLevel;
 
         [SerializeField] private int _costMultiplier;
@@ -27,6 +29,7 @@ namespace Assets.Scripts.Upgrades
         public virtual void Upgrade(MoneyBalance moneyBalance)
         {
             moneyBalance.SpendMoney(_cost);
+            Instantiate(_upgradeSound, transform.position, Quaternion.identity);
             _cost *= _costMultiplier;
             _currentLevel++; 
             if (_isMaxLevel)
