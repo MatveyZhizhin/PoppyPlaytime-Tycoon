@@ -6,20 +6,27 @@ namespace Assets.Scripts.CottonGarden
     public class Growth : MonoBehaviour
     {
         [SerializeField] private GameObject _cotton;
-
-        public event Action Grew;
-        public event Action Harvested;
+        [SerializeField] private Timer _timer;
 
         public void GrowCotton()
         {
             _cotton.SetActive(true);
-            Grew?.Invoke();
         }
 
         public void HarvestCotton()
         {
             _cotton.SetActive(false);
-            Harvested?.Invoke();
+            _timer.StartTimer();
+        }
+
+        private void OnEnable()
+        {
+            _timer.Ended += GrowCotton;
+        }
+
+        private void OnDisable()
+        {
+            _timer.Ended -= GrowCotton;
         }
     }
 }

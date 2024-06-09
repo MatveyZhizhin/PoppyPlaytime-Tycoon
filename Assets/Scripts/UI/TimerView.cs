@@ -1,14 +1,13 @@
 using UnityEngine;
 using UnityEngine.UI;
-using Assets.Scripts.CottonGarden;
 
 namespace Assets.Scripts.UI
 {
-    [RequireComponent(typeof(GrowTimer))]
-    public class GrowTimerView : MonoBehaviour
+    [RequireComponent(typeof(Timer))]
+    public class TimerView : MonoBehaviour
     {
         private Image _timerImage;
-        private GrowTimer _growTimer;
+        private Timer _growTimer;
 
         private void Awake()
         {

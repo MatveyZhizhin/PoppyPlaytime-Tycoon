@@ -1,14 +1,13 @@
+using Assets.Scripts.UI;
 using System;
 using UnityEngine;
 
-namespace Assets.Scripts.CottonGarden
+namespace Assets.Scripts
 {
-    public class GrowTimer : MonoBehaviour
+    public class Timer : MonoBehaviour
     {
         [SerializeField] private float _startTime;
         private float _time;
-
-        [SerializeField] private Growth _growth;
 
         private bool _isStarted;
 
@@ -24,10 +23,10 @@ namespace Assets.Scripts.CottonGarden
         private void Update()
         {
             if (_isStarted)
-            {                
+            {
                 if (_time <= 0)
                 {
-                    _growth.GrowCotton();
+                    EndTimer();
                     _time = _startTime;
                 }
                 else
@@ -38,27 +37,15 @@ namespace Assets.Scripts.CottonGarden
             }
         }
 
-        private void StartTimer()
+        public void StartTimer()
         {
             Started?.Invoke();
-            _isStarted = true;           
+            _isStarted = true;
         }
         private void EndTimer()
         {
             Ended?.Invoke();
             _isStarted = false;
-        }
-
-        private void OnEnable()
-        {
-            _growth.Harvested -= StartTimer;
-            _growth.Grew += EndTimer;
-        }
-
-        private void OnDisable()
-        {
-            _growth.Harvested += StartTimer;
-            _growth.Grew -= EndTimer;
         }
     }
 }

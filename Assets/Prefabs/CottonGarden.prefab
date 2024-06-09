@@ -216,6 +216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _cotton: {fileID: 9129540704084976550}
+  _timer: {fileID: 7250594080134861549}
 --- !u!65 &9046780822285531416
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1010,8 +1011,8 @@ GameObject:
   - component: {fileID: 5024423153003186695}
   - component: {fileID: 3002291989910572834}
   - component: {fileID: 4166814173843045137}
-  - component: {fileID: 8951567216332159917}
-  - component: {fileID: 3766480200528146165}
+  - component: {fileID: 7250594080134861549}
+  - component: {fileID: 4582755216544856273}
   m_Layer: 0
   m_Name: TimerImage
   m_TagString: Untagged
@@ -1076,7 +1077,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &8951567216332159917
+--- !u!114 &7250594080134861549
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1089,8 +1090,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _startTime: 30
-  _growth: {fileID: 1526475767088571014}
---- !u!114 &3766480200528146165
+--- !u!114 &4582755216544856273
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

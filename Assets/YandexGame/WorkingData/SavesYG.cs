@@ -17,6 +17,7 @@ namespace YG
         public bool[] openLevels = new bool[3];
 
         // Ваши сохранения
+        
 
         // ...
 
