@@ -1,0 +1,16 @@
+{
+    "idSave": 11,
+    "isFirstSession": false,
+    "language": "ru",
+    "promptDone": false,
+    "money": 1,
+    "newPlayerName": "Hello!",
+    "openLevels": [
+        false,
+        true,
+        false
+    ],
+    "Balance": 5,
+    "StackHolderCurrentSize": 0,
+    "StackHolderMaxSize": 15
+}

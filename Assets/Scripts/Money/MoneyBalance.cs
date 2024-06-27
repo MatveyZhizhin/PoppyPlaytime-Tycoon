@@ -8,6 +8,8 @@ namespace Assets.Scripts.Money
     {
         [SerializeField] private int _balance;
 
+        public int Balance { get => _balance; set => _balance = value; }
+
         public bool HasMoney(int money) => _balance >= money;
 
         public event Action<string> Changed;

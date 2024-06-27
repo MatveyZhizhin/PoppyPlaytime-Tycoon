@@ -12,10 +12,13 @@ namespace Assets.Scripts.Player
         private float _childSize;
 
         [SerializeField] private Transform _childSpawnPoint;
+        [SerializeField] private GameObject _child;
 
         private List<GameObject> _children = new List<GameObject>();
 
         public event Action<string> Changed;
+
+        public int CurrentSize = 0;
 
         public int MaxSize { get => _maxSize; set => _maxSize = value; }
 
@@ -27,16 +30,18 @@ namespace Assets.Scripts.Player
 
         private void Start()
         {
-            Changed?.Invoke(_children.Count.ToString());
+            Changed?.Invoke(CurrentSize.ToString());
+            AddChild(CurrentSize);
         }
 
-        public void AddChild(GameObject child, int amount = 1)
+        public void AddChild(int amount = 1)
         {
-            _childSize = child.transform.localScale.y;
+            _childSize = _child.transform.localScale.y;
             for (int i = 0; i < amount; i++)
             {
-                var newChild = Instantiate(child, _childSpawnPoint.position, _childSpawnPoint.rotation, transform);
+                var newChild = Instantiate(_child, _childSpawnPoint.position, _childSpawnPoint.rotation, transform);
                 _children.Add(newChild.gameObject);
+                CurrentSize = _children.Count;
                 var newPointPosition = _childSpawnPoint.localPosition.y + _childSize * 2;
                 ChangeSpawnPointPosition(newPointPosition);
                 Changed?.Invoke(_children.Count.ToString());
@@ -54,6 +59,7 @@ namespace Assets.Scripts.Player
             {
                 Destroy(_children[i - 1]);
                 _children.RemoveAt(i - 1);
+                CurrentSize = _children.Count;
                 var newPointPosition = _childSpawnPoint.localPosition.y - _childSize * 2;
                 if (newPointPosition == 0)
                 {

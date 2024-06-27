@@ -6,13 +6,12 @@ namespace Assets.Scripts.UI
     [RequireComponent(typeof(Timer))]
     public class TimerView : MonoBehaviour
     {
-        private Image _timerImage;
-        private Timer _growTimer;
+        [SerializeField] private Image _timerImage;
+        private Timer _timer;
 
         private void Awake()
         {
-            TryGetComponent(out _timerImage);
-            TryGetComponent(out _growTimer);
+            TryGetComponent(out _timer);
         }
 
         private void Start()
@@ -37,16 +36,16 @@ namespace Assets.Scripts.UI
 
         private void OnEnable()
         {
-            _growTimer.Started -= EnableTimer;
-            _growTimer.Ended += DisableTimer;
-            _growTimer.Updated += RenderTimer;
+            _timer.Started -= EnableTimer;
+            _timer.Ended += DisableTimer;
+            _timer.Updated += RenderTimer;
         }
 
         private void OnDisable()
         {
-            _growTimer.Started += EnableTimer;
-            _growTimer.Ended -= DisableTimer;
-            _growTimer.Updated -= RenderTimer;
+            _timer.Started += EnableTimer;
+            _timer.Ended -= DisableTimer;
+            _timer.Updated -= RenderTimer;
         }
     }
 }

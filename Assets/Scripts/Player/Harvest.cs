@@ -14,7 +14,6 @@ namespace Assets.Scripts.Player
         private Animator _playerAnimator;
         private Health _gardenHealth;
 
-        [SerializeField] private GameObject _cottonPiece;
         [SerializeField] private ParticleSystem _hitEffect;
         [SerializeField] private Transform _effectSpawnPoint;
         [SerializeField] private AudioSource _harvestSound;
@@ -35,7 +34,7 @@ namespace Assets.Scripts.Player
             {               
                 yield return new WaitForSeconds(_punchRate);
                 transform.LookAt(gardenHealth.transform.position);
-                _stackHolder.AddChild(_cottonPiece, _damage);
+                _stackHolder.AddChild(_damage);
                 _playerAnimator.SetTrigger(PlayerAnimationConstans.Harvest);
                 Instantiate(_harvestSound, transform.position, Quaternion.identity);
             }

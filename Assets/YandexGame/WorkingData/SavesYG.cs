@@ -17,7 +17,10 @@ namespace YG
         public bool[] openLevels = new bool[3];
 
         // Ваши сохранения
-        
+        public int Balance = 0;
+        public int StackHolderCurrentSize = 0;
+        public int StackHolderMaxSize = 10;
+        public float PunchRate = 5f;
 
         // ...
 

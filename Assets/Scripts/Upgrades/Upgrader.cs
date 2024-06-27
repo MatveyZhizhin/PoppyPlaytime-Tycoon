@@ -28,15 +28,15 @@ namespace Assets.Scripts.Upgrades
 
         public virtual void Upgrade(MoneyBalance moneyBalance)
         {
-            moneyBalance.SpendMoney(_cost);
-            Instantiate(_upgradeSound, transform.position, Quaternion.identity);
-            _cost *= _costMultiplier;
-            _currentLevel++; 
+            _currentLevel++;
             if (_isMaxLevel)
             {
                 Changed?.Invoke("Макс.");
                 return;
             }
+            moneyBalance.SpendMoney(_cost);
+            Instantiate(_upgradeSound, transform.position, Quaternion.identity);
+            _cost *= _costMultiplier;            
             Changed?.Invoke(_cost.ToString());           
         }
     }

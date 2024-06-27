@@ -8,8 +8,11 @@ namespace Assets.Scripts.Upgrades
     public class ProfitUpgrader : MonoBehaviour
     {
         [SerializeField] private Payer[] _payer;
-        [SerializeField] private Timer _timer;
+        [SerializeField] private Timer _rewardTimer;
+        [SerializeField] private Timer _buttonTimer;
         [SerializeField] private Button _upgradeButton;
+        [SerializeField] private Image _adImage;
+
         private const int _adId = 1;
 
 
@@ -22,7 +25,8 @@ namespace Assets.Scripts.Upgrades
             {
                 payer.ToyCost *= 2;
             }
-            _timer.StartTimer();
+            _rewardTimer.StartTimer();
+            _buttonTimer.StartTimer();
         }
 
         public void ResetProfit()
@@ -36,27 +40,30 @@ namespace Assets.Scripts.Upgrades
         public void Enable()
         {
             _upgradeButton.enabled = true;
+            _adImage.gameObject.SetActive(true);
         }
 
         public void Disable()
         {
             _upgradeButton.enabled = false; 
+            _adImage.gameObject.SetActive(false);
         }
 
         private void OnEnable()
         {
             YandexGame.RewardVideoEvent += UpgradeProfit;
-            _timer.Started += Disable;
-            _timer.Ended += ResetProfit;
-            _timer.Ended += Enable;
+            _buttonTimer.Started += Disable;
+            _rewardTimer.Ended += ResetProfit;
+            _buttonTimer.Ended += Enable;
+
         }
 
         private void OnDisable()
         {
             YandexGame.RewardVideoEvent -= UpgradeProfit;
-            _timer.Started -= Disable;
-            _timer.Ended -= ResetProfit;
-            _timer.Ended -= Enable;
+            _buttonTimer.Started -= Disable;
+            _rewardTimer.Ended -= ResetProfit;
+            _buttonTimer.Ended -= Enable;
         }
     }
 }
