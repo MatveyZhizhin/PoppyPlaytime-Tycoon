@@ -10,6 +10,8 @@ namespace Assets.Scripts.CottonGarden
 
         public int GardenHealth => _health;
 
+        public bool IsHarvested  => _health <= 0;
+
         private Growth _growth;
 
         private void Awake()
@@ -17,11 +19,19 @@ namespace Assets.Scripts.CottonGarden
             _growth = GetComponentInParent<Growth>();
         }
 
+        private void Start()
+        {
+            if (_health <= 0)
+            {
+                _growth.HarvestCotton();
+            }
+        }
+
         public void TakeDamage(int damage)
         {
             _health -= damage;
 
-            if (_health <= 0)
+            if (IsHarvested)
             {
                 _growth.HarvestCotton();
             }           

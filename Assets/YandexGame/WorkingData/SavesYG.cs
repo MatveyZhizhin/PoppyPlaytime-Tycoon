@@ -20,7 +20,14 @@ namespace YG
         public int Balance = 0;
         public int StackHolderCurrentSize = 0;
         public int StackHolderMaxSize = 10;
-        public float PunchRate = 5f;
+        public float PunchRate = 2f;
+        public bool[] PurchasedObjects = new bool[10];
+        public int[] CurrentLevelsOfUpgraders = new int[18];
+        public int[] CostsOfUpgraders = new int[18];
+        public float[] ProduceRates = new float[4];
+        public int[] ToyCosts = new int[4];
+        public float[] MineRates = new float[4];
+        public float[] MoveSpeeds = new float[8];
 
         // ...
 

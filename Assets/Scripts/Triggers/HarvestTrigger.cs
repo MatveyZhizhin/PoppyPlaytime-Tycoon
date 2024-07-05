@@ -15,7 +15,7 @@ namespace Assets.Scripts.Triggers
 
         protected override void OnStay(Harvest triggered)
         {
-            if(!_gardenHealth.gameObject.activeInHierarchy)
+            if(_gardenHealth.IsHarvested)
             {
                 triggered.StopAllCoroutines();
             }

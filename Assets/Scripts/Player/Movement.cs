@@ -23,6 +23,7 @@ namespace Assets.Scripts.Player
         private void FixedUpdate()
         {
             Move();
+
         }
 
         private void Move()

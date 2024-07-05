@@ -12,11 +12,18 @@ namespace Assets.Scripts.Money
         [SerializeField] private ParticleSystem _purchaseEffect;
         [SerializeField] private AudioSource _purchaseSound;
 
+        public bool IsPurchased { get; set; }
+
         public event Action<string> Changed;
 
         private void Start()
         {
             Changed?.Invoke(_cost.ToString());
+            if (IsPurchased)
+            {
+                _purchasedObject.SetActive(true);
+                gameObject.SetActive(false);
+            }
         }
 
         public void Buy(MoneyBalance moneyBalance)
@@ -24,6 +31,7 @@ namespace Assets.Scripts.Money
             if (!moneyBalance.HasMoney(_cost))
                 return;
 
+            IsPurchased = true;
             moneyBalance.SpendMoney(_cost);
             Instantiate(_purchaseSound, transform.position, Quaternion.identity);
             Instantiate(_purchaseEffect, transform.position, _purchaseEffect.transform.rotation);

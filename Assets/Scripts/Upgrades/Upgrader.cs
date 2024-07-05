@@ -13,6 +13,9 @@ namespace Assets.Scripts.Upgrades
         [SerializeField] private int _maxLevel;
         private int _currentLevel = 1;
 
+        public int CurrentLevel { get => _currentLevel; set => _currentLevel = value; }
+        public int Cost { get => _cost; set => _cost = value; }
+
         [SerializeField] private AudioSource _upgradeSound;
 
         protected bool _isMaxLevel => _currentLevel == _maxLevel;
@@ -24,6 +27,10 @@ namespace Assets.Scripts.Upgrades
         private void Start()
         {
             Changed?.Invoke(_cost.ToString());
+            if (_isMaxLevel)
+            {
+                Changed?.Invoke("Макс.");
+            }
         }
 
         public virtual void Upgrade(MoneyBalance moneyBalance)

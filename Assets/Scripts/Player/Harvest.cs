@@ -34,15 +34,15 @@ namespace Assets.Scripts.Player
             {               
                 yield return new WaitForSeconds(_punchRate);
                 transform.LookAt(gardenHealth.transform.position);
-                _stackHolder.AddChild(_damage);
                 _playerAnimator.SetTrigger(PlayerAnimationConstans.Harvest);
+                _stackHolder.AddChild(_damage);
+                _gardenHealth.TakeDamage(_damage);
                 Instantiate(_harvestSound, transform.position, Quaternion.identity);
             }
         }
 
         private void Hit()
         {
-            _gardenHealth.TakeDamage(_damage);
             Instantiate(_hitEffect, _effectSpawnPoint.position, _effectSpawnPoint.rotation);
         }
     }
