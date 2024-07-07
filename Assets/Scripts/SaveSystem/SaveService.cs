@@ -85,6 +85,9 @@ namespace Assets.Scripts.SaveSystem
         {
             var data = YandexGame.savesData;
 
+            if (data.CostsOfUpgraders[0] == 0)
+                return;
+
             _balance.Balance = data.Balance;
             _stackHolder.MaxSize = data.StackHolderMaxSize;
             _stackHolder.CurrentSize = data.StackHolderCurrentSize;
