@@ -12,6 +12,18 @@ namespace Assets.Scripts.Audio
             SetVolume(1f);
         }
 
+        private void OnApplicationFocus(bool focus)
+        {
+            if (focus)
+            {
+                SetVolume(1f);
+            } 
+            else
+            {
+                SetVolume(0f);
+            }
+        }
+
         public void SetVolume(float volume)
         {
             foreach (var source in _audioSources)

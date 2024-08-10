@@ -1,9 +1,9 @@
-using Assets.Scripts.CottonGarden;
 using Assets.Scripts.Factory;
 using Assets.Scripts.Factory.Conveyor;
 using Assets.Scripts.Money;
 using Assets.Scripts.Player;
 using Assets.Scripts.Upgrades;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using YG;
@@ -20,19 +20,15 @@ namespace Assets.Scripts.SaveSystem
         [SerializeField] private Manufacturer[] _manufacturers;
         [SerializeField] private CottonMiner[] _miners;
         [SerializeField] private ConveyorLine[] _conveyors;
+        [SerializeField] private float _autoSaveInterval;
 
         private void Awake()
         {
             _stackHolder = FindObjectOfType<StackHolder>();
             _balance = FindObjectOfType<MoneyBalance>();
             _harvest = FindObjectOfType<Harvest>();
+            StartCoroutine(AutoSave());
         }
-
-        private void OnApplicationQuit()
-        {
-            Save();
-        }
-
         private void OnEnable()
         {
             YandexGame.GetDataEvent += Load;
@@ -43,39 +39,42 @@ namespace Assets.Scripts.SaveSystem
             YandexGame.GetDataEvent -= Load;
         }
 
+        private void OnApplicationQuit()
+        {
+            Save();
+        }
+
         private void Save()
         {
-            var data = YandexGame.savesData;
-
-            data.Balance = _balance.Balance;
-            data.StackHolderMaxSize = _stackHolder.MaxSize;
-            data.StackHolderCurrentSize = _stackHolder.CurrentSize;
-            data.PunchRate = _harvest.PunchRate;
+            YandexGame.savesData.Balance = _balance.Balance;
+            YandexGame.savesData.StackHolderMaxSize = _stackHolder.MaxSize;
+            YandexGame.savesData.StackHolderCurrentSize = _stackHolder.CurrentSize;
+            YandexGame.savesData.PunchRate = _harvest.PunchRate;
             for (int i = 0; i < _purchasableObjects.Length; i++)
             {
-                data.PurchasedObjects[i] = _purchasableObjects[i].IsPurchased;
+                YandexGame.savesData.PurchasedObjects[i] = _purchasableObjects[i].IsPurchased;
             }
 
             for (int i = 0; i < _upgraders.Length; i++)
             {
-                data.CurrentLevelsOfUpgraders[i] = _upgraders[i].CurrentLevel;
-                data.CostsOfUpgraders[i] = _upgraders[i].Cost;
+                YandexGame.savesData.CurrentLevelsOfUpgraders[i] = _upgraders[i].CurrentLevel;
+                YandexGame.savesData.CostsOfUpgraders[i] = _upgraders[i].Cost;
             }
 
             for (int i = 0; i < _manufacturers.Length; i++)
             {
-                data.ProduceRates[i] = _manufacturers[i].ProduceRate;
-                data.ToyCosts[i] = _manufacturers[i].GetComponent<Payer>().ToyCost;
+                YandexGame.savesData.ProduceRates[i] = _manufacturers[i].ProduceRate;
+                YandexGame.savesData.ToyCosts[i] = _manufacturers[i].GetComponent<Payer>().ToyCost;
             }
 
             for (int i = 0; i < _miners.Length; i++)
             {
-                data.MineRates[i] = _miners[i].MineRate;
+                YandexGame.savesData.MineRates[i] = _miners[i].MineRate;
             }
 
             for (int i = 0; i < _conveyors.Length; i++)
             {
-                data.MoveSpeeds[i] = _conveyors[i].Speed;
+                YandexGame.savesData.MoveSpeeds[i] = _conveyors[i].Speed;
             }
 
             YandexGame.SaveProgress();
@@ -117,6 +116,15 @@ namespace Assets.Scripts.SaveSystem
             for (int i = 0; i < _conveyors.Length; i++)
             {
                 _conveyors[i].Speed = data.MoveSpeeds[i];
+            }
+        }
+
+        private IEnumerator AutoSave()
+        {
+            while (true)
+            {               
+                yield return new WaitForSeconds(_autoSaveInterval);
+                Save();
             }
         }
 
