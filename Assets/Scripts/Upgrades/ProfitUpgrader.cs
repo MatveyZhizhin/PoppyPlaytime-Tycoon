@@ -12,6 +12,7 @@ namespace Assets.Scripts.Upgrades
         [SerializeField] private Timer _buttonTimer;
         [SerializeField] private Button _upgradeButton;
         [SerializeField] private Image _adImage;
+        [SerializeField] private Image _castleImage;
 
         private const int _adId = 1;
 
@@ -27,6 +28,7 @@ namespace Assets.Scripts.Upgrades
             }
             _rewardTimer.StartTimer();
             _buttonTimer.StartTimer();
+            _castleImage.gameObject.SetActive(true);
         }
 
         public void ResetProfit()
