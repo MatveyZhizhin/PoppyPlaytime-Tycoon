@@ -1,5 +1,5 @@
 {
-    "idSave": 287,
+    "idSave": 338,
     "isFirstSession": false,
     "language": "ru",
     "promptDone": false,
@@ -11,7 +11,7 @@
         false
     ],
     "Balance": 0,
-    "StackHolderCurrentSize": 1,
+    "StackHolderCurrentSize": 3,
     "StackHolderMaxSize": 3,
     "PunchRate": 2.0,
     "PurchasedObjects": [

@@ -2202,7 +2202,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1290433297}
+      - m_Target: {fileID: 286756191}
         m_TargetAssemblyTypeName: Assets.Scripts.SaveSystem.SaveService, Assembly-CSharp
         m_MethodName: ResetProgress
         m_Mode: 1
@@ -3675,6 +3675,100 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4f06407f06d8cf41b643015132cafca, type: 3}
+--- !u!1 &286756190
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 286756192}
+  - component: {fileID: 286756191}
+  m_Layer: 0
+  m_Name: SaveService
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &286756191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286756190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90afef74978900c43be0f7de0b6f85a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _purchasableObjects:
+  - {fileID: 1299117094}
+  - {fileID: 860722808}
+  - {fileID: 1633703512}
+  - {fileID: 1235053585}
+  - {fileID: 1700192586}
+  - {fileID: 2015544929}
+  - {fileID: 1848651325}
+  - {fileID: 107959751}
+  - {fileID: 1582525377}
+  - {fileID: 1623726744}
+  _upgraders:
+  - {fileID: 239114007}
+  - {fileID: 1473809065}
+  - {fileID: 732449205}
+  - {fileID: 1450735054}
+  - {fileID: 1920641988}
+  - {fileID: 1991387497}
+  - {fileID: 117518785}
+  - {fileID: 2069851233}
+  - {fileID: 714775382}
+  - {fileID: 48279049}
+  - {fileID: 383484812}
+  - {fileID: 1794175666}
+  - {fileID: 1990524587}
+  - {fileID: 1339062107}
+  - {fileID: 2121987883}
+  - {fileID: 919681331}
+  - {fileID: 1781440745}
+  - {fileID: 1901284674}
+  _manufacturers:
+  - {fileID: 629399733}
+  - {fileID: 2012763357}
+  - {fileID: 66767895}
+  - {fileID: 427218602}
+  _miners:
+  - {fileID: 619822310}
+  - {fileID: 1613476599}
+  - {fileID: 1037709976}
+  - {fileID: 863560286}
+  _conveyors:
+  - {fileID: 501359808}
+  - {fileID: 192931467}
+  - {fileID: 53348728}
+  - {fileID: 1918986522}
+  - {fileID: 270134574}
+  - {fileID: 1992953823}
+  - {fileID: 214159123}
+  - {fileID: 668101994}
+  _autoSaveInterval: 3
+--- !u!4 &286756192
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286756190}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 967.36365, y: 611.4979, z: 0.010797102}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &288581585
 GameObject:
   m_ObjectHideFlags: 0
@@ -7991,6 +8085,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2211564899198745196, guid: caf9732433f4dc044845763962493607, type: 3}
+      propertyPath: singleton
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2211564899198745196, guid: caf9732433f4dc044845763962493607, type: 3}
       propertyPath: CloseVideoAd.m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -8000,6 +8098,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2211564899198745196, guid: caf9732433f4dc044845763962493607, type: 3}
       propertyPath: OpenFullscreenAd.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2211564899198745196, guid: caf9732433f4dc044845763962493607, type: 3}
+      propertyPath: CloseFullscreenAd.m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2211564899198745196, guid: caf9732433f4dc044845763962493607, type: 3}
@@ -8036,6 +8138,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2211564899198745196, guid: caf9732433f4dc044845763962493607, type: 3}
       propertyPath: OpenFullscreenAd.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2211564899198745196, guid: caf9732433f4dc044845763962493607, type: 3}
+      propertyPath: CloseFullscreenAd.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2211564899198745196, guid: caf9732433f4dc044845763962493607, type: 3}
@@ -8109,10 +8215,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2211564899198745197, guid: caf9732433f4dc044845763962493607, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1290433297}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: caf9732433f4dc044845763962493607, type: 3}
 --- !u!4 &717988379 stripped
 Transform:
@@ -13228,7 +13331,7 @@ PrefabInstance:
       objectReference: {fileID: 2018049304}
     - target: {fileID: 8275278890968826827, guid: 35fa95bde1a56744eb9b514cef2e0af8, type: 3}
       propertyPath: onHideTimer.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8275278890968826827, guid: 35fa95bde1a56744eb9b514cef2e0af8, type: 3}
       propertyPath: onShowTimer.m_PersistentCalls.m_Calls.Array.size
@@ -13242,6 +13345,10 @@ PrefabInstance:
       propertyPath: onHideTimer.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1290433294}
+    - target: {fileID: 8275278890968826827, guid: 35fa95bde1a56744eb9b514cef2e0af8, type: 3}
+      propertyPath: onShowTimer.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 882600108}
     - target: {fileID: 8275278890968826827, guid: 35fa95bde1a56744eb9b514cef2e0af8, type: 3}
       propertyPath: onHideTimer.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -14028,68 +14135,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 404d6214ebdd58d43a94c7ed650dc2f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1290433297
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 882600108}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90afef74978900c43be0f7de0b6f85a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _purchasableObjects:
-  - {fileID: 1299117094}
-  - {fileID: 860722808}
-  - {fileID: 1633703512}
-  - {fileID: 1235053585}
-  - {fileID: 1700192586}
-  - {fileID: 2015544929}
-  - {fileID: 1848651325}
-  - {fileID: 107959751}
-  - {fileID: 1582525377}
-  - {fileID: 1623726744}
-  _upgraders:
-  - {fileID: 239114007}
-  - {fileID: 1473809065}
-  - {fileID: 732449205}
-  - {fileID: 1450735054}
-  - {fileID: 1920641988}
-  - {fileID: 1991387497}
-  - {fileID: 117518785}
-  - {fileID: 2069851233}
-  - {fileID: 714775382}
-  - {fileID: 48279049}
-  - {fileID: 383484812}
-  - {fileID: 1794175666}
-  - {fileID: 1990524587}
-  - {fileID: 1339062107}
-  - {fileID: 2121987883}
-  - {fileID: 919681331}
-  - {fileID: 1781440745}
-  - {fileID: 1901284674}
-  _manufacturers:
-  - {fileID: 629399733}
-  - {fileID: 2012763357}
-  - {fileID: 66767895}
-  - {fileID: 427218602}
-  _miners:
-  - {fileID: 619822310}
-  - {fileID: 1613476599}
-  - {fileID: 1037709976}
-  - {fileID: 863560286}
-  _conveyors:
-  - {fileID: 501359808}
-  - {fileID: 192931467}
-  - {fileID: 53348728}
-  - {fileID: 1918986522}
-  - {fileID: 270134574}
-  - {fileID: 1992953823}
-  - {fileID: 214159123}
-  - {fileID: 668101994}
-  _autoSaveInterval: 3
 --- !u!4 &1293032694 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 403426, guid: 55ca4401075700d46a23ae8179a79579, type: 3}
@@ -25017,3 +25062,4 @@ SceneRoots:
   - {fileID: 1226152057}
   - {fileID: 991075600}
   - {fileID: 444854056}
+  - {fileID: 286756192}

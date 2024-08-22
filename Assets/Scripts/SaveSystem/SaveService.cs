@@ -38,13 +38,8 @@ namespace Assets.Scripts.SaveSystem
         {
             YandexGame.GetDataEvent -= Load;
         }
-
-        private void OnApplicationQuit()
-        {
-            Save();
-        }
-
-        private void Save()
+    
+        public void Save()
         {
             YandexGame.savesData.Balance = _balance.Balance;
             YandexGame.savesData.StackHolderMaxSize = _stackHolder.MaxSize;
@@ -80,7 +75,7 @@ namespace Assets.Scripts.SaveSystem
             YandexGame.SaveProgress();
         }
 
-        public void Load()
+        private void Load()
         {
             var data = YandexGame.savesData;
 

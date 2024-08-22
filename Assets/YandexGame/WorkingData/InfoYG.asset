@@ -36,8 +36,8 @@ MonoBehaviour:
   saveCloudInterval: 0
   saveOnQuitGame: 1
   quitGameParameters:
-    objectName: YandexGame
-    methodName: _SaveProgress
+    objectName: SaveService
+    methodName: Save
   leaderboardEnable: 1
   saveScoreAnonymousPlayers: 1
   leaderboardSimulation:
@@ -297,7 +297,7 @@ MonoBehaviour:
   archivingBuild: 1
   logoImageFormat: 1
   backgroundImageFormat: 3
-  pixelRatioEnable: 0
+  pixelRatioEnable: 1
   pixelRatioValue: 1
   loadGameRun: 0
   staticRBTInGame: 0

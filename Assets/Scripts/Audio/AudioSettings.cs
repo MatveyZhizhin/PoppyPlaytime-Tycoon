@@ -1,11 +1,12 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Assets.Scripts.Audio
 {
     public class AudioSettings : MonoBehaviour
     {
-        [SerializeField] private List<AudioSource> _audioSources;
+        [SerializeField] private AudioSource[] _audioSources;
+
+        private float currentVolume = 1f;
 
         private void Start()
         {
@@ -16,10 +17,11 @@ namespace Assets.Scripts.Audio
         {
             if (focus)
             {
-                SetVolume(1f);
-            } 
+                SetVolume(currentVolume);
+            }
             else
             {
+                currentVolume = _audioSources[0].volume;
                 SetVolume(0f);
             }
         }
@@ -30,11 +32,6 @@ namespace Assets.Scripts.Audio
             {
                 source.volume = volume;
             }
-        }
-
-        public void AddSound(AudioSource sound)
-        {
-            _audioSources.Add(sound);
         }
     }
 }

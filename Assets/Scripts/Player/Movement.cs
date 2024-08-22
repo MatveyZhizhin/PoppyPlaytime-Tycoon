@@ -1,5 +1,7 @@
 using UnityEngine;
 using Assets.Scripts.Animations.AnimatorsConstans;
+using System;
+using YG;
 
 namespace Assets.Scripts.Player
 {
@@ -41,7 +43,7 @@ namespace Assets.Scripts.Player
             }
 
             transform.LookAt(moveInput + transform.position);
-            _playerRigidbody.velocity = moveSpeed;
+            _playerRigidbody.velocity = moveSpeed;        
         }
     }
 }
